@@ -1,0 +1,11 @@
+{% if bookmarks %}
+<ol>
+  {% for bookmark in bookmarks %}
+  <li>
+    <a href=”{{ bookmark.url }}” target="_blank">{{ bookmark.name }}</a>
+    <a>{{bookmark.Category}}</a>
+    <a>{{bookmark.Description}}</a>
+  </li>
+  {% endfor %}
+</ol>
+{% else %} We have no bookmarks :( {% endif %}
