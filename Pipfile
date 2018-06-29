@@ -9,6 +9,10 @@ python-decouple = "*"
 djangorestframework = "*"
 markdown = "*"
 django-filter = "*"
+gunicorn = "*"
+"psycopg2-binary" = "*"
+dj-database-url = "*"
+whitenoise = "*"
 
 [dev-packages]
 
