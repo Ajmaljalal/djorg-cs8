@@ -1,1 +1,1 @@
-web: gunicorn ajmal-djorg.wsgi
+web: gunicorn djorg.wsgi

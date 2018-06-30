@@ -14,7 +14,7 @@ import os
 
 from decouple import config
 import dj_database_url
-from whitenoise import WhiteNoise
+#from whitenoise import WhiteNoise
 
 # Build paths inside the project like this: os.path.join(BASE_DIR, ...)
 BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
