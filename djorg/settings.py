@@ -92,7 +92,6 @@ DATABASES = {
 DATABASES['default'] = dj_database_url.parse('postgres://...')
 '''
 DATABASES = {
-
        'default': dj_database_url.config(
            default=config('DATABASE_URL')
        )
