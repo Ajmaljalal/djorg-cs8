@@ -29,7 +29,7 @@ SECRET_KEY =  config('SECRET_KEY')#'x&f)s267w+4mzjg7=4f_c*x(m7a!tu1(lrj^_-2$isfd
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = config('DEBUG', default=False, cast=bool)#True
 
-ALLOWED_HOSTS =[]
+ALLOWED_HOSTS =config('ALLOWED_HOSTS').split(',')
 
 
 # Application definition
@@ -128,6 +128,8 @@ USE_TZ = True
 
 STATIC_URL = '/static/'
 
+STATICFILES_STORAGE = 'whitenoise.storage.CompressedManifestStaticFilesStorage'
+STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')-
 REST_FRAMEWORK = {
     # Use Django's standard `django.contrib.auth` permissions,
     # or allow read-only access for unauthenticated users.
