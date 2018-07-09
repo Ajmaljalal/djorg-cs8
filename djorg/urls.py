@@ -19,6 +19,7 @@ from django.conf.urls import url, include
 from rest_framework import routers
 from notes.api import NoteViewset, PersonalNoteViewset
 from rest_framework.authtoken import views
+from django.views.generic import TemplateView
 
 router = routers.DefaultRouter()
 router.register(r'notes', NoteViewset)
@@ -26,6 +27,7 @@ router.register(r'personalnotes', PersonalNoteViewset)
 
 urlpatterns = [
     re_path(r'^api-token-auth/', views.obtain_auth_token),
+    re_path('.*', TemplateView.as_view(template_name = 'index.html')),
     path('admin/', admin.site.urls),
     url(r'^api-auth/', include(router.urls)),
     path('bookmarks/', include('bookmarks.urls')),
