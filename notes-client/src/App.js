@@ -6,7 +6,7 @@ class App extends Component {
   render() {
     return (
       <div className="App">
-        <h1> react connected to Django</h1>
+        <h1> React connected to Django</h1>
       </div>
     );
   }

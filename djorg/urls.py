@@ -31,6 +31,4 @@ urlpatterns = [
     url(r'^api-auth/', include(router.urls)),
     path('bookmarks/', include('bookmarks.urls')),
     re_path('^$', TemplateView.as_view(template_name = 'index.html')),
-   
-
 ]
