@@ -14,6 +14,7 @@ gunicorn = "*"
 dj-database-url = "*"
 whitenoise = "*"
 django-webpack-loader = "*"
+south = "*"
 
 [dev-packages]
 
