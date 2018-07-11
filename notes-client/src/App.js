@@ -26,12 +26,14 @@ class App extends Component {
 
   async componentDidMount() {
     try {
+      console.log(notes);
       const res = await fetch('http://127.0.0.1:8000/admin/notes/note/');
       const notes = await res.json();
+      console.log(notes);
       this.setState({
         notes
       });
-      console.log(this.state.notes);
+      
     } catch (e) {
       console.log(e);
     }
