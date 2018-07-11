@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import './App.css';
 
 
 const notes = [
@@ -26,8 +27,7 @@ class App extends Component {
 
   async componentDidMount() {
     try {
-      console.log(notes);
-      const res = await fetch('http://127.0.0.1:8000/admin/notes/note/');
+      const res = await fetch('http://127.0.0.1:8000/api-auth/notes/');
       const notes = await res.json();
       console.log(notes);
       this.setState({
@@ -41,13 +41,16 @@ class App extends Component {
 
   render() {
     return (
-      <div>
+      <div className = 'container'>
+       <h2>Sample notes app</h2>
+       <div className = 'notes'>
         {this.state.notes.map(item => (
-          <div key={item.id}>
-            <h1>{item.Title}</h1>
-            <span>{item.Content}</span>
+          <div key={item.id} className = 'note'>
+            <h3>{item.title}</h3>
+            <span>{item.content}</span>
           </div>
         ))}
+      </div>
       </div>
     );
   }
